@@ -141,6 +141,7 @@ letter-spacing: 0.78px;
 }
 .footer{
     padding-top: 60px;
+    padding-bottom: 161px
 }
 .footer-logo{
     color: var(--main-color);
