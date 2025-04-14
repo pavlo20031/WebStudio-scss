@@ -98,11 +98,15 @@ color: var(--logo-color2);
     display: flex;
     align-items: center;
 }
-.header-list{
+.header-nav{
     display: flex;
 margin-left: 93px;
-flex-direction: row;
-gap: 50px;
+
+}
+.header-list{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 
 }
 .header-contact{
@@ -179,7 +183,6 @@ line-height: 1.71; /* 171.429% */
 letter-spacing: 0.42px;
 }
 .employment{
-    padding-top: 118px;
     padding-bottom: 94px;
 }
 .employment-list{
@@ -207,16 +210,17 @@ letter-spacing: 0.42px;
     gap: 30px;
 
 }
+.command-text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .command-item{
-    width: 270px;
-    height: 368px;
 background-color: var(--main-color);
 border-radius: 0px 0px 4px 4px;
 }
 .command-img{
     width: 270px;
     justify-content: space-around;
-margin-bottom: 30px;
 }
 .command-subtitle{
 color:var(--text-color);
@@ -258,11 +262,18 @@ letter-spacing: 0.48px;
     line-height: 1.38;
     letter-spacing: 0.78px;
 }
+
+.address{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 9px;
+}
 .footer-list{
     display: flex;
     flex-direction: column;
     gap: 9px;
-    margin-top: 20px;
+
 }
 .footer-address{
 color:var(--main-color);
