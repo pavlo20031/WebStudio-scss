@@ -7,7 +7,7 @@
     --text-color:#212121;
 --paragraf-color:#757575;
 --footertext-color:rgba(255, 255, 255, 0.6);
-
+--outline-color:#EEE;
 }
 body{
     font-family: Roboto;
@@ -299,6 +299,7 @@ letter-spacing: 0.42px;
 .portfolio{
     padding-top: 94px;
     padding-bottom: 94px;
+    display: flex;
 }
 .portfolio-name{
 color: var(--text-color);
@@ -315,8 +316,14 @@ font-weight: 400;
 line-height: 1.87; /* 187.5% */
 letter-spacing: 0.48px;
 }
-
+.portfolio-list{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
 .portfolio-button{
+    display: flex;
     border-radius: 4px;
     background:var(--main-color2);
     color:var(--text-color);
@@ -325,6 +332,19 @@ letter-spacing: 0.48px;
     font-weight: 500;
     line-height: 1.62; /* 162.5% */
     letter-spacing: 0.48px; 
+padding: 6px 22px 6px 22px;
+}
+.portfolio-list-projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.portfolio-item{
+    outline: 1px solid var(--outline-color);
+}
+.portfolio-card{
+    background-color: var(--main-color);
+    padding: 20px 24px 20px 24px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus{
