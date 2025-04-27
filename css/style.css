@@ -350,7 +350,6 @@ padding: 6px 22px 6px 22px;
     outline: 1px solid var(--outline-color);
     flex-basis: calc((100% - 60px) / 3);
 }
-
 .portfolio-card{
     display: flex;
     background-color: var(--main-color);
