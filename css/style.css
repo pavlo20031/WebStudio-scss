@@ -118,9 +118,11 @@ margin-left: 93px;
 .hero{
     padding-top: 200px;
     padding-bottom: 200px;
-    /* background-color: var(--background-color); */
-    background-image: url(../img/img11.png);
+    background-color: var(--background-color);
+    background-image: url(../img/bg-hero.webp), linear-gradient( rgba(47, 48, 58, 0.40),  rgba(47, 48, 58, 0.40));
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1600px 600px;
 }
 .hero-box{
     display: flex;
@@ -169,20 +171,21 @@ margin: 0 auto;
 }
 .advantages-item::before{
     content: "";
-    background: url(../img/antenna1.png) var(--main-color2) center no-repeat;
+    background: url(../img/antenna.webp) var(--main-color2) center no-repeat;
     width: 270px;
     height: 120px;
     display: block;
+    background-size: 70px 70px;
     margin-bottom: 30px;
 }
 .advantages-item:nth-child(2):before{
-    background: url(../img/clock1.png) var(--main-color2) center no-repeat;
+    background: url(../img/clock.webp) var(--main-color2) center no-repeat;
 }
 .advantages-item:nth-child(3):before{
-    background: url(../img/diagram1.png) var(--main-color2) center no-repeat;
+    background: url(../img/diagram.webp) var(--main-color2) center no-repeat;
 }
 .advantages-item:nth-child(4):before{
-    background: url(../img/astronaut1.png) var(--main-color2) center no-repeat;
+    background: url(../img/astronaut.webp) var(--main-color2) center no-repeat;
 }
 .advantages-subtitle{
 color:var(--text-color);
