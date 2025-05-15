@@ -8,6 +8,7 @@
 --paragraf-color:#757575;
 --footertext-color:rgba(255, 255, 255, 0.6);
 --outline-color:#EEE;
+--line-color: #ECECEC;
 }
 body{
     font-family: Roboto;
@@ -22,6 +23,7 @@ body{
 .header{
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: solid 1px var(--line-color) ;
 }
 .header-logo{
     color: var(--logo-color);
@@ -73,6 +75,9 @@ letter-spacing: 0.28px;
     font-weight: 700;
     line-height: 1.38;
     letter-spacing: 0.78px;
+}
+.active{
+    color: var(--logo-color2);
 }
 .header-studio:hover,
 .header-studio:focus{
