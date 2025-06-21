@@ -9,6 +9,8 @@
 --footertext-color:rgba(255, 255, 255, 0.6);
 --outline-color:#EEE;
 --line-color: #ECECEC;
+--icon-color:#AFB1B8;
+--bg-item:rgba(255, 255, 255, 0.10);
 }
 body{
     font-family: Roboto;
@@ -60,6 +62,15 @@ font-size: 14px;
 font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.28px;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.header-mail{
+    width: 16px;
+        height: 12px;
+        fill: var(--paragraf-color);
 }
 .header-tel{
 color:var(--paragraf-color);
@@ -67,6 +78,10 @@ font-size: 14px;
 font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.28px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
 }
 .header-text{
     color:var(--logo-color2);
@@ -94,10 +109,21 @@ color: var(--logo-color2);
 .header-email:hover,
 .header-email:focus{
 color: var(--logo-color2);
+.header-mail{
+    fill: var(--logo-color2);
+}
 }
 .header-tel:hover,
 .header-tel:focus{
 color: var(--logo-color2);
+.header-phone{
+    fill: var(--logo-color2);
+}
+}
+.header-phone{
+    width: 10px;
+        height: 16px;
+        fill: var(--paragraf-color);
 }
 .header-box{
     display: flex;
@@ -243,7 +269,7 @@ letter-spacing: 0.42px;
 }
 .command-text{
     padding-top: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 16px;
 }
 .command-item{
 background-color: var(--main-color);
@@ -280,6 +306,66 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.18;
 letter-spacing: 0.48px;
+}
+.command-icon{
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color);
+}
+.command-items{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+}
+.command-items:hover,
+.command-items:focus{
+background-color: var(--logo-color2);
+.command-icon{
+    fill: var(--main-color);
+}
+}
+.command-lists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom:30px ;
+}
+.client{
+    padding: 94px 0;
+}
+.client-title{
+    color: var(--text-color);
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.16;
+        letter-spacing: 1.08px;
+        margin-bottom: 50px;
+}
+.client-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.client-icon{
+    width: 106px;
+        height: 60px;
+        fill: var(--icon-color);
+}
+.client-item{
+    border-radius: 4px;
+        border: 1px solid var(--icon-color);
+    padding: 16px 32px;
+}
+.client-item:hover,
+.client-item:focus{
+    border:1px solid var(--logo-color2);
+    .client-icon{
+        fill: var(--logo-color2);
+    }
 }
 .footer{
     padding-top: 60px;
@@ -328,6 +414,43 @@ font-size: 14px;
 font-weight: 400;
 line-height: 1.71; /* 171.429% */
 letter-spacing: 0.42px;
+}
+.footer-title{
+    color: var(--main-color);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+}
+.footer-icon{
+    width: 20px;
+        height: 20px;
+        fill: var(--main-color);
+}
+.footer-lists{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.footer-items{
+    width: 44px;
+    height: 44px;
+    background-color:var(--bg-item) ;
+    border-radius: 50%;
+    padding: 12px;
+}
+.footer-items:hover{
+    background-color: var(--logo-color2);
+}
+.footer-box{
+    display: flex;
+    gap: 70px;
+}
+.footer-box2{
+margin-top: 12px;
 }
 .portfolio{
     padding-top: 94px;
