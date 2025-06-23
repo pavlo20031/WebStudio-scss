@@ -11,6 +11,7 @@
 --line-color: #ECECEC;
 --icon-color:#AFB1B8;
 --bg-item:rgba(255, 255, 255, 0.10);
+--bg-img:rgba(47, 48, 58, 0.80);
 }
 body{
     font-family: Roboto;
@@ -244,9 +245,10 @@ letter-spacing: 0.42px;
     flex-wrap: wrap;
 }
 .employment-item{
+    position: relative;
     flex-basis: calc((100% - 60px) / 3);
 }
-.employment-subtitle{
+.employment-title{
     color:var(--text-color);
     text-align: center;
     font-size: 36px;
@@ -256,6 +258,27 @@ letter-spacing: 0.42px;
     margin: 0 auto;
     margin-bottom: 50px;
 }
+/* .employment-subtitle{
+    position: absolute;
+    top: 224px;
+    color: var(--main-color);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.1428571429;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        background-color: var(--bg-img);
+}
+.employment-text1{
+    padding: 27px 107px;
+}
+.employment-text2{
+    padding: 27px 113px;
+}
+.employment-text3{
+    padding: 27px 95px;
+} */
 .command{
     padding-top: 94px;
     padding-bottom: 94px;
@@ -269,7 +292,7 @@ letter-spacing: 0.42px;
 }
 .command-text{
     padding-top: 30px;
-    margin-bottom: 16px;
+    padding-bottom: 30px;
 }
 .command-item{
 background-color: var(--main-color);
@@ -330,7 +353,7 @@ background-color: var(--logo-color2);
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom:30px ;
+    margin-top: 16px;
 }
 .client{
     padding: 94px 0;
