@@ -162,6 +162,8 @@ margin-left: 93px;
     flex-direction: column;
     gap: 30px;
 }
+
+
 .hero-title{
     width: 696px;
     color:var(--main-color2);
@@ -258,27 +260,21 @@ letter-spacing: 0.42px;
     margin: 0 auto;
     margin-bottom: 50px;
 }
-/* .employment-subtitle{
-    position: absolute;
-    top: 224px;
+.employment-subtitle{
+    padding: 27px 0;
     color: var(--main-color);
         text-align: center;
         font-size: 14px;
         font-weight: 700;
-        line-height: 1.1428571429;
+        line-height: 1.14;
         letter-spacing: 0.42px;
         text-transform: uppercase;
         background-color: var(--bg-img);
+        width: 100%;
+    position: absolute;
+    bottom: 0;
 }
-.employment-text1{
-    padding: 27px 107px;
-}
-.employment-text2{
-    padding: 27px 113px;
-}
-.employment-text3{
-    padding: 27px 95px;
-} */
+
 .command{
     padding-top: 94px;
     padding-bottom: 94px;
