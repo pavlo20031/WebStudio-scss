@@ -12,7 +12,7 @@ a{
    }
    button{
        border: none;
-       cursor:all-scroll;
+       cursor:pointer;
    }
    img{
     display: block;
@@ -21,3 +21,10 @@ a{
 address{
     font-style: normal;
 }
+input, textarea{
+    display:block ;
+}
+input,textarea:focus-visible {
+    outline: none;
+    border: none;
+    box-shadow: none; }
