@@ -38,7 +38,7 @@ info@devstudio.com</a></li>
 <section class="hero">
     <div class="container hero-box">
 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-<button class="hero-button" type="button">Замовити послугу</button>
+<button data-modal-open class="hero-button" type="button">Замовити послугу</button>
 </div>
 </section>
 <!-- ceкція переваги -->
@@ -325,7 +325,64 @@ info@devstudio.com</a></li>
     </li>
 </ul>
 </div>
+<form class="footer-form">
+    <label class="footer-label">
+        Підпишіться на розсилку
+        <input placeholder="E-mail" class="footer-input" type="email">
+    </label>
+    <button class="footer-btn" type="submit">
+        Підписатися
+        <svg class="footer-icons">
+            <use href="./img/symbol-defs.svg#telegram"></use>
+        </svg>
+    </button>
+</form>
 </div>
 </footer>
+<div data-modal class="backdrop is-hidden">
+    <div class="modal">
+        <button class="modal-close" data-modal-close type="button"><svg class="modal-icons">
+                <use href="./img/symbol-defs.svg#close"></use>
+            </svg></button>
+        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="modal-form">
+            <label class="modal-label">Ім'я
+                <div class="modal-text">
+                    <svg class="modal-icon">
+                        <use href="./img/symbol-defs.svg#person"></use>
+                    </svg>
+                <input class="modal-input" type="text">
+            </div>
+            </label>
+            <label class="modal-label">Телефон
+                <div class="modal-text">
+                    <svg class="modal-icon">
+                        <use href="./img/symbol-defs.svg#phone"></use>
+                    </svg>
+                <input class="modal-input" type="tel">
+            </div>
+            </label>
+            <label class="modal-label">Пошта
+                <div class="modal-text">
+                    <svg class="modal-icon">
+                        <use href="./img/symbol-defs.svg#email"></use>
+                    </svg>
+                <input class="modal-input" type="email">
+            </div>
+            </label>
+            <label class="modal-label">Коментар
+                <textarea placeholder="Введіть текст" class="modal-comment"></textarea>
+            </label>
+            <div class="modal-end">
+            <label class="modal-labels">
+                <input class="modal-check" type="checkbox">
+                Погоджуюся з розсилкою та приймаю <a class="modal-link" href="#">Умови договору</a>
+            </label>
+            <button class="modal-button" type="submit">Відправити</button>
+        </div>
+        </form>
+    </div>
+    </div>
+<script type="module" src="./js/modal.js"></script>
 </body>
 </html>
