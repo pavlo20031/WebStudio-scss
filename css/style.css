@@ -485,7 +485,7 @@ letter-spacing: 0.42px;
 }
 .footer-box2{
     margin-left: 70px;
-        margin-right: 93px;
+        margin-right: auto;
 }
 .footer-form{
     display: flex;
@@ -628,7 +628,6 @@ letter-spacing: 0.48px;
 .modal{
     background-color: var(--main-color);
         width: 528px;
-        height: 581px;
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
         position: absolute;
