@@ -348,26 +348,26 @@ info@devstudio.com</a></li>
         <form class="modal-form">
             <label class="modal-label">Ім'я
                 <div class="modal-text">
-                    <svg class="modal-icon">
-                        <use href="./img/symbol-defs.svg#person"></use>
-                    </svg>
-                <input class="modal-input" type="text">
+                <input required class="modal-input" type="text">
+                <svg class="modal-icon">
+                    <use href="./img/symbol-defs.svg#person"></use>
+                </svg>
             </div>
             </label>
             <label class="modal-label">Телефон
                 <div class="modal-text">
-                    <svg class="modal-icon">
-                        <use href="./img/symbol-defs.svg#phone"></use>
-                    </svg>
-                <input class="modal-input" type="tel">
+                <input placeholder="099 000 00 00" pattern="^0\d{2}\s\d{3}\s\d{2}\s\d{2}$" required class="modal-input" type="tel">
+                <svg class="modal-icon">
+                    <use href="./img/symbol-defs.svg#phone"></use>
+                </svg>
             </div>
             </label>
             <label class="modal-label">Пошта
                 <div class="modal-text">
-                    <svg class="modal-icon">
-                        <use href="./img/symbol-defs.svg#email"></use>
-                    </svg>
-                <input class="modal-input" type="email">
+                <input required class="modal-input" type="email">
+                <svg class="modal-icon">
+                    <use href="./img/symbol-defs.svg#email"></use>
+                </svg>
             </div>
             </label>
             <label class="modal-label">Коментар
@@ -376,7 +376,7 @@ info@devstudio.com</a></li>
             <div class="modal-end">
             <label class="modal-labels">
                 <div class="modal-box">
-                <input class="modal-check" type="checkbox">
+                <input required class="modal-check" type="checkbox">
                 Погоджуюся з розсилкою та приймаю 
             </div>
                 <a class="modal-link" href="#">Умови договору</a>
