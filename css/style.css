@@ -485,7 +485,7 @@ letter-spacing: 0.42px;
 }
 .footer-box2{
     margin-left: 70px;
-        margin-right: auto;
+        margin-right: 93px;
 }
 .footer-form{
     display: flex;
@@ -628,6 +628,7 @@ letter-spacing: 0.48px;
 .modal{
     background-color: var(--main-color);
         width: 528px;
+        height: 581px;
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
         position: absolute;
@@ -704,7 +705,7 @@ letter-spacing: 0.48px;
     border-radius: 4px;
     border: 1px solid var(--border-color);
     padding: 12px 16px;
-    /* color:var(--comment-color) ; */
+    color:var(--comment-color) ;
         font-size: 12px;
         font-weight: 400;
         line-height: 1.16;
@@ -715,19 +716,12 @@ letter-spacing: 0.48px;
 .modal-comment:is(:hover,:focus){
     border:1px solid var(--logo-color2) ;
 }
-.modal-text:is(:hover,:focus){
-    .modal-input{
-    border: 1px solid var(--logo-color2);
-    }
-    .modal-icon {
-        fill: var(--logo-color2);
-    }
-}
 .modal-input:is(:hover,:focus){
     border: 1px solid var(--logo-color2) ;
-    .modal-icon {
-            fill: var(--logo-color2);
-        }
+}
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+    fill: var(--logo-color2);
 }
 .modal-end{
     display: flex;
@@ -769,14 +763,19 @@ letter-spacing: 0.48px;
         text-underline-position: from-font;
 }
 .modal-check{
-    /* appearance: none; */
+    appearance: none;
     width: 16px;
         height: 15px;
         border-radius: 3px;
         border: 2px solid var(--text-color);
 }
 .modal-check:checked{
-    accent-color: var(--logo-color2);
+    border: 2px solid var(--logo-color2);
+    background-color: var(--logo-color2);
+    background-image: url(../img/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .modal-button{
     border-radius: 4px;
