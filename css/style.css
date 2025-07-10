@@ -770,8 +770,8 @@ letter-spacing: 0.48px;
         border: 2px solid var(--text-color);
 }
 .modal-check:checked{
-    border: 2px solid var(--logo-color2);
-    background-color: var(--logo-color2);
+    border: 2px solid var(--hover-color);
+    background-color: var(--hover-color);
     background-image: url(../img/check.png);
     background-repeat: no-repeat;
     background-position: center;
