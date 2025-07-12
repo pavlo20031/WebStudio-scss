@@ -19,6 +19,7 @@
 --border-color:rgba(33, 33, 33, 0.20);
 --hover-color:#188CE8;
 --comment-color:rgba(117, 117, 117, 0.50);
+--portfolio-color:rgba(33, 150, 243, 0.90);
 }
 body{
     font-family: Roboto;
@@ -31,9 +32,13 @@ body{
     /* outline: 1px solid red; */
 }
 .header{
+    background-color: var(--main-color);
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: solid 1px var(--line-color) ;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 .header-logo{
     color: var(--logo-color);
@@ -100,7 +105,19 @@ gap: 10px;
     letter-spacing: 0.78px;
 }
 .active{
+    position: relative;
     color: var(--logo-color2);
+}
+.active::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--logo-color2);
+    border-radius: 2px;
+    position: absolute;
+bottom: -35px;
+left: 0;
 }
 .header-studio:hover,
 .header-studio:focus{
@@ -153,6 +170,12 @@ margin-left: 93px;
     margin-left: auto;
     flex-direction: row;
     gap: 50px;
+}
+.main{
+    padding-top: 86px;
+}
+.main-portfolio{
+    padding-top: 86px;
 }
 .hero{
     padding-top: 200px;
@@ -585,9 +608,35 @@ padding: 6px 22px 6px 22px;
     outline: 1px solid var(--outline-color);
     flex-basis: calc((100% - 60px) / 3);
 }
+.portfolio-text {
+    position: relative;
+    width: 100%;
+}
+
+.portfolio-subtitle {
+    padding: 63px 24px;
+    background-color: var(--portfolio-color);
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55556;
+    /* 155.556% */
+    letter-spacing: 0.54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
 .portfolio-item:hover,
 .portfolio-item:focus{
+
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+.portfolio-subtitle{
+    opacity: 1;
+}
 }
 .portfolio-card{
     display: flex;
@@ -620,6 +669,7 @@ letter-spacing: 0.48px;
         justify-content: center;
         align-items: center; */
         opacity: 1;
+        z-index: 2;
 }
 .is-hidden{
     opacity: 0;
@@ -635,6 +685,7 @@ letter-spacing: 0.48px;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 40px;
+        z-index: 2;
 }
 .modal-title{
     color: var(--text-color);
@@ -658,7 +709,7 @@ letter-spacing: 0.48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px;
+    /* padding: 6px; */
     background-color: transparent;
     border: 1px solid var(--modal-line);
     border-radius: 100px ;
