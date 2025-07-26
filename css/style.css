@@ -646,13 +646,14 @@ transition-property: background-color, color, box-shadow;
 .portfolio-item{
     outline: 1px solid var(--outline-color);
     flex-basis: calc((100% - 60px) / 3);
-    transition-property: box-shadow;
+    transition-property:box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-text {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .portfolio-subtitle {
@@ -671,12 +672,18 @@ transition-property: background-color, color, box-shadow;
     height: 100%;
     opacity: 0;
 
+        transition-property:transform;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(294px);
+
 }
 .portfolio-item:hover,
 .portfolio-item:focus{
 
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
 .portfolio-subtitle{
+    transform: translateY(0);
     opacity: 1;
 }
 }
@@ -717,6 +724,9 @@ letter-spacing: 0.48px;
     opacity: 0;
     pointer-events: none;
 }
+.is-hidden .modal{
+    transform:scale(-3) translate(0) rotate(-1920deg);
+}
 .modal{
     background-color: var(--main-color);
         width: 528px;
@@ -728,6 +738,9 @@ letter-spacing: 0.48px;
         transform: translate(-50%, -50%);
         padding: 40px;
         z-index: 2;
+                    transition-property: transform;
+                        transition-duration: 250ms;
+                        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title{
     color: var(--text-color);
