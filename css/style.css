@@ -125,6 +125,26 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .active{
     position: relative;
     color: var(--logo-color2);
+    animation-name: move-logo;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes move-logo{
+    0%{
+        transform: rotateZ(45deg);
+    }
+    12.5%{
+        transform: rotateZ(22.5deg);
+    }
+    25%{
+                transform: rotateZ(0);
+    }
+    37.5%{
+        transform: rotateZ(-22.5deg);
+    }
+    50%{
+transform: rotateZ(-45deg);
+    }
 }
 .active::after{
     content: "";
@@ -683,8 +703,9 @@ transition-property: background-color, color, box-shadow;
 
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
 .portfolio-subtitle{
-    transform: translateY(0);
+    transform: translateY(0px);
     opacity: 1;
+
 }
 }
 .portfolio-card{
