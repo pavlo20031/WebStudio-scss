@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/reset.css">
 <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
     <header class="header">
         <div class="container header-box">
         <a class="header-logo" href="../index.html"><span class="header-text">Web</span>Studio</a>
        <nav class="header-nav"><ul class="header-list">
-<li class="header-item"><a class="header-studio active" href="../index.html">Студія</a></li>
+<li class="header-item"><a class="animate__animated animate__bounceInDown header-studio active " href="../index.html">Студія</a></li>
 <li class="header-item"><a class="header-portfolio" href="./pages/portfolio.html">Портфоліо</a></li>
 <li class="header-item"><a class="header-contact" href="#">Контакти</a></li> </ul></nav>
 <ul class="header-contact">
@@ -45,7 +47,7 @@ info@devstudio.com</a></li>
 <section class="advantages">
     <div class="container advantages-box">
     <ul class="advantages-list">
-    <li class="advantages-item"><h3 class="advantages-subtitle">УВАГА ДО ДЕТАЛЕЙ</h3>
+    <li class="advantages-item"><h3  class="advantages-subtitle">УВАГА ДО ДЕТАЛЕЙ</h3>
     <p class="advantages-paragraf">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
 </li><li class="advantages-item"><h3 class="advantages-subtitle">ПУНКТУАЛЬНІСТЬ</h3>
     <p class="advantages-paragraf">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
@@ -59,7 +61,7 @@ info@devstudio.com</a></li>
 <!-- чим ми займаємося -->
 <section class="employment">
     <div class="container employment-box">
-<h2 class="employment-title">Чим ми займаємося</h2>
+<h2 data-aos="fade-down" class="employment-title">Чим ми займаємося</h2>
 <ul class="employment-list"> 
     <li class="employment-item">
     <img class="employment-img" src="./img/computer.webp" alt="computer">
@@ -79,9 +81,9 @@ info@devstudio.com</a></li>
 <!-- наша команда -->
 <section class="command">
     <div class="container command-box">
-<h2 class="command-subtitle">Наша команда</h2>
+<h2 class="command-subtitle" data-aos="fade-up">Наша команда</h2>
 <ul class="command-list">
-<li class="command-item">
+<li class="command-item" data-aos="fade-right">
         <img class="command-img" src="./img/igor.webp" alt="Igor">
         <div class="command-text"><h3 class="command-name">Ігор Дем'яненко</h3>
         <p class="command-paragraf">Product Designer</p>  
@@ -119,7 +121,7 @@ info@devstudio.com</a></li>
     
     </li>
   
-<li class="command-item">
+<li class="command-item" data-aos="fade-down">
         <img class="command-img" src="./img/olga.webp" alt="Olga">
         <div class="command-text"><h3 class="command-name">Ольга Рєпіна</h3>
         <p class="command-paragraf">Frontend Developer</p>
@@ -156,7 +158,7 @@ info@devstudio.com</a></li>
     </div>
     
     </li>
-    <li class="command-item">
+    <li class="command-item" data-aos="fade-up">
         <img class="command-img" src="./img/mykola.webp" alt="Mykola">
         <div class="command-text"><h3 class="command-name">Микола Тарасов</h3>
         <p class="command-paragraf">Marketing</p>
@@ -194,7 +196,7 @@ info@devstudio.com</a></li>
     
     </li>
 
-<li class="command-item">
+<li class="command-item" data-aos="fade-left">
         <img class="command-img" src="./img/mykhailo.webp" alt="Mykhailo">
 
         <div class="command-text"><h3 class="command-name">Михайло Єрмаков</h3>
@@ -238,7 +240,7 @@ info@devstudio.com</a></li>
 <!-- секція клієнти -->
 <section class="client">
     <div class="container">
-        <h2 class="client-title">Постійні клієнти</h2>
+        <h2 class="client-title" data-aos="fade-down">Постійні клієнти</h2>
         <ul class="client-list">
             <li class="client-item"><a href="#" class="client-link">
                 <svg class="client-icon">
@@ -387,5 +389,9 @@ info@devstudio.com</a></li>
     </div>
     </div>
 <script type="module" src="./js/modal.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
