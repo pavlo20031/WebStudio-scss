@@ -1,0 +1,40 @@
+.employment {
+    padding-bottom: 94px;
+}
+
+.employment-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.employment-item {
+    position: relative;
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.employment-title {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 1.08px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.employment-subtitle {
+    padding: 27px 0;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    background-color: var(--bg-img);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
