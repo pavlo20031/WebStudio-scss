@@ -1,0 +1,171 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-color;
+
+  &__box {
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+  }
+
+  &__logo {
+    color: $main-color;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.78px;
+  }
+
+  &__text {
+    color: $logo-color2;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.78px;
+  }
+
+  &__addresses {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__address {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    /* 171.429% */
+    letter-spacing: 0.42px;
+  }
+
+  &__email {
+    color: $footertext-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    /* 171.429% */
+    letter-spacing: 0.42px;
+  }
+
+  &__tel {
+    color: $footertext-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    /* 171.429% */
+    letter-spacing: 0.42px;
+  }
+
+  &__box2 {
+    margin-left: 70px;
+    margin-right: auto;
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__lists {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    background-color: $bg-item;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $logo-color2;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $main-color;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 12px;
+  }
+
+  &__label {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 358px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid $email-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px 16px;
+    margin-top: 20px;
+    color: var(--input-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    /* 125% */
+    letter-spacing: 0.48px;
+  }
+
+  &__btn {
+    border-radius: 4px;
+    background-color: $logo-color2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: $main-color;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    /* 187.5% */
+    letter-spacing: 0.96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 28px;
+  }
+
+  &__icons {
+    width: 24px;
+    height: 24px;
+    fill: $main-color;
+  }
+}

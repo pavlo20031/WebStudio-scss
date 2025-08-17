@@ -1,58 +1,60 @@
-.advantages-box {
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 118px;
+
+  &__box {
     display: flex;
     gap: 30px;
-}
+  }
 
-.advantages {
-    padding-top: 94px;
-    padding-bottom: 118px;
-}
-
-.advantages-list {
+  &__list {
     display: flex;
 
     flex-direction: row;
     gap: 30px;
-}
+  }
 
-.advantages-item::before {
-    content: "";
-    background: url(../img/antenna.webp) var(--main-color2) center no-repeat;
-    width: 270px;
-    height: 120px;
-    display: block;
-    background-size: 70px 70px;
-    margin-bottom: 30px;
-}
+  &__item {
+    &::before {
+      content: "";
+      background: url(../img/antenna.webp) $main-color2 center no-repeat;
+      width: 270px;
+      height: 120px;
+      display: block;
+      background-size: 70px 70px;
+      margin-bottom: 30px;
+    }
 
-.advantages-item:nth-child(2):before {
-    background: url(../img/clock.webp) var(--main-color2) center no-repeat;
-}
+    &:nth-child(2):before {
+      background: url(../img/clock.webp) $main-color2 center no-repeat;
+    }
 
-.advantages-item:nth-child(3):before {
-    background: url(../img/diagram.webp) var(--main-color2) center no-repeat;
-}
+    &:nth-child(3):before {
+      background: url(../img/diagram.webp) $main-color2 center no-repeat;
+    }
 
-.advantages-item:nth-child(4):before {
-    background: url(../img/astronaut.webp) var(--main-color2) center no-repeat;
-}
+    &:nth-child(4):before {
+      background: url(../img/astronaut.webp) $main-color2 center no-repeat;
+    }
+  }
 
-.advantages-subtitle {
-    color: var(--text-color);
+  &__subtitle {
+    color: $text-color;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 10px;
-}
+  }
 
-.advantages-paragraf {
+  &__paragraf {
     width: 270px;
-    color: var(--paragraf-color);
+    color: $paragraf-color;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
     /* 171.429% */
     letter-spacing: 0.42px;
+  }
 }
