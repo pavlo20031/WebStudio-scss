@@ -40,9 +40,10 @@
   &__close {
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+        @include flexible ();
     /* padding: 6px; */
     background-color: transparent;
     border: 1px solid $modal-line;
@@ -81,7 +82,7 @@
     color: $paragraf-color;
     font-size: 12px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.16;
     letter-spacing: 0.12px;
   }
 
@@ -146,17 +147,19 @@
   }
 
   &__end {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+        @include flexible ($direction:column);
     gap: 30px;
   }
 
   &__labels {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+        @include flexible ();
     margin-top: 20px;
     color: $paragraf-color;
     font-size: 14px;
@@ -167,9 +170,10 @@
   }
 
   &__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+        @include flexible ();
     gap: 7px;
     margin-right: 8px;
   }
@@ -206,14 +210,15 @@
   }
 
   &__button {
-    border-radius: 4px;
-    background-color: $logo-color2;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    color: $main-color;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.87;
+    // border-radius: 4px;
+    // background-color: $logo-color2;
+    // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    // color: $main-color;
+    // text-align: center;
+    // font-size: 16px;
+    // font-weight: 700;
+    // line-height: 1.87;
+        @include button ();
     /* 187.5% */
     letter-spacing: 0.96px;
     padding: 10px 52px;

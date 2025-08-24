@@ -1,0 +1,16 @@
+@mixin flexible ($justify: center, $align: center, $wrap: wrap, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align ;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+}
+@mixin button ($shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.15)){
+        border-radius: 4px;
+            background: $logo-color2;
+            box-shadow:$shadow ;
+            color: $main-color;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.87;
+}

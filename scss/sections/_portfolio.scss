@@ -4,14 +4,16 @@
   display: flex;
 
   &__list {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+        @include flexible ();
     gap: 8px;
     margin-bottom: 50px;
   }
 
   &__button {
-    display: flex;
+    // display: flex;
+        @include flexible ();
     border-radius: 4px;
     background: $main-color2;
     color: $text-color;
@@ -44,8 +46,9 @@
   }
 
   &__projects {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+        @include flexible ();
     gap: 30px;
   }
 
@@ -88,7 +91,6 @@
       width: 100%;
       height: 100%;
       opacity: 0;
-
       transition-property: transform, opacity;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,10 +98,11 @@
     }
 
     &__card {
-      display: flex;
+      // display: flex;
+          @include flexible ($direction:column, $align:start);
       background-color: $main-color;
       padding: 20px 24px 20px 24px;
-      flex-direction: column;
+      // flex-direction: column;
       gap: 4px;
     }
 

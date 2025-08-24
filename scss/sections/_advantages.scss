@@ -3,14 +3,15 @@
   padding-bottom: 118px;
 
   &__box {
-    display: flex;
+    // display: flex;
+        @include flexible ();
     gap: 30px;
   }
 
   &__list {
-    display: flex;
-
-    flex-direction: row;
+    // display: flex;
+        @include flexible ($align:stretch);
+    // flex-direction: row;
     gap: 30px;
   }
 

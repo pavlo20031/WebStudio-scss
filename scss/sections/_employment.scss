@@ -4,18 +4,20 @@
   &__title {
     color: $text-color;
     text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.16;
+    // font-size: 36px;
+    // font-weight: 700;
+    // line-height: 1.16;
+        @extend %title;
     letter-spacing: 1.08px;
     margin: 0 auto;
     margin-bottom: 50px;
   }
 
   &__list {
-    display: flex;
+    // display: flex;
+        @include flexible ();
     gap: 30px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
 
   &__item {
