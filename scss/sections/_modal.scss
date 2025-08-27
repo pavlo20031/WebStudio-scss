@@ -33,9 +33,10 @@
   transform: translate(-50%, -50%);
   padding: 40px;
   z-index: 2;
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-property: transform;
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      @include transitions ($property: transform);
 
   &__close {
     width: 30px;
@@ -63,9 +64,10 @@
     width: 18px;
     height: 18px;
     fill: $logo-color;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: fill;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: fill);
   }
 
   &__title {
@@ -98,9 +100,10 @@
     padding: 12px 0 12px 42px;
     margin-top: 4px;
     margin-bottom: 10px;
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: border;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: border);
 
     &:is(:hover, :focus) {
       border: 1px solid $logo-color2;
@@ -119,9 +122,10 @@
     top: 11px;
     left: 12px;
     fill: $text-color;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: fill;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: fill);
   }
 
   &__comment {
@@ -137,9 +141,10 @@
     letter-spacing: 0.12px;
     margin-top: 4px;
     resize: none;
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: border;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: border);
 
     &:is(:hover, :focus) {
       border: 1px solid $logo-color2;
@@ -222,9 +227,10 @@
     /* 187.5% */
     letter-spacing: 0.96px;
     padding: 10px 52px;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: background-color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: background-color);
 
     &:is(:hover, :focus) {
       background-color: $hover-color;

@@ -51,3 +51,18 @@
     margin: 0 auto;
   }
 }
+
+
+
+
+$thems:(
+primary:rgb(0, 0, 255),
+succes:rgb(0, 255, 0),
+danger:rgb(255, 0, 0)
+);
+
+@each $name, $color in $thems{
+.btn__#{$name} {
+  background-color: $color;
+}
+}

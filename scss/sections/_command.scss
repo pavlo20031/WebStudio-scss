@@ -71,9 +71,10 @@
     height: 44px;
     border-radius: 50%;
     padding: 12px;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: background-color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: background-color);
 
     &:hover,
     &:focus {
@@ -89,8 +90,9 @@
     width: 20px;
     height: 20px;
     fill: $icon-color;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: fill;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: fill);
   }
 }

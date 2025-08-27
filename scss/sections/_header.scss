@@ -42,7 +42,7 @@
   &__list {
     // display: flex;
         @include flexible ();
-    flex-direction: row;
+    // flex-direction: row;
     gap: 50px;
   }
   &__link {
@@ -51,9 +51,10 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.28px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transitions ($property: color);
 
     &:hover,
         &:focus {
@@ -80,9 +81,10 @@
     // align-items: center;
         @include flexible ();
     gap: 10px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: color);
 
     &:hover,
         &:focus {
@@ -97,9 +99,10 @@
     width: 16px;
     height: 12px;
     fill: $paragraf-color;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: fill;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: fill);
 }
 
 &__tel {
@@ -113,9 +116,10 @@
     // align-items: center;
         @include flexible ();
     gap: 10px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: color);
 
         &:hover,
             &:focus {
@@ -131,9 +135,10 @@
     width: 10px;
     height: 16px;
     fill: $paragraf-color;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: fill;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitions ($property: fill);
 }
 
 }
