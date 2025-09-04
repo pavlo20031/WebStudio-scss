@@ -292,8 +292,8 @@ transform: rotateZ(-45deg);
 }
 
 .hero {
-  padding-top: 286px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2F303A;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/bg-hero.webp);
   background-repeat: no-repeat;
@@ -374,8 +374,14 @@ transform: rotateZ(-45deg);
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 118px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 118px;
+  }
 }
 .advantages__box {
   display: flex;
@@ -447,6 +453,12 @@ transform: rotateZ(-45deg);
 
 .employment {
   padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .employment {
+    display: block;
+  }
 }
 .employment__title {
   color: #212121;
@@ -486,9 +498,15 @@ transform: rotateZ(-45deg);
 }
 
 .command {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #F5F4FA;
+}
+@media screen and (min-width: 1200px) {
+  .command {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .command__subtitle {
   color: #212121;
@@ -510,8 +528,17 @@ transform: rotateZ(-45deg);
 .command__item {
   background-color: #FFF;
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 90px) / 4);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .command__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .command__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 .command__img {
   /* width: 270px; */
@@ -576,7 +603,12 @@ transform: rotateZ(-45deg);
 }
 
 .client {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding: 94px 0;
+  }
 }
 .client__title {
   color: #212121;
@@ -596,11 +628,11 @@ transform: rotateZ(-45deg);
   gap: 30px;
 }
 .client__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border-radius: 4px;
   border: 1px solid #AFB1B8;
-  padding: 16px 32px;
+  padding: 16px 52px;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -610,6 +642,18 @@ transform: rotateZ(-45deg);
 }
 .client__link:hover .client__icon, .client__link:focus .client__icon {
   fill: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
+    padding: 16px 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: 170px;
+    padding: 16px 32px;
+  }
 }
 .client__icon {
   width: 106px;
