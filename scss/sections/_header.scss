@@ -1,47 +1,68 @@
 .header {
   background-color: $main-color;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: solid 1px $line-color;
   position: fixed;
   z-index: 1;
   width: 100%;
 
+  @media screen and (min-width: 768px) {
+    padding: 21px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 25px 0;
+  }
+
   &__box {
     // display: flex;
     // align-items: center;
-    @include flexible ();
+    @include flexible($wrap:nowrap);
   }
 
   &__logo {
     color: $logo-color;
     font-family: Raleway;
-    // font-size: 26px;
-    // font-weight: 700;
-    // line-height: 1.38;
-    @extend %font;
-    letter-spacing: 0.78px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.72px;
+    margin-right: auto;
+
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      letter-spacing: 0.78px;
+    }
   }
 
   &__text {
     color: $logo-color2;
     font-family: Raleway;
-    // font-size: 26px;
-    // font-weight: 700;
-    // line-height: 1.38;
-        @extend %font;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
     letter-spacing: 0.78px;
   }
 
   &__nav {
-    // display: flex;
-        @include flexible ();
-    margin-left: 93px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      @include flexible();
+      gap: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include flexible();
+      gap: 30px;
+    }
   }
 
   &__list {
     // display: flex;
-        @include flexible ();
+    @include flexible();
     // flex-direction: row;
     gap: 50px;
   }
@@ -54,58 +75,70 @@
     // transition-property: color;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    @include transitions ($property: color);
+    @include transitions($property: color);
 
     &:hover,
-        &:focus {
-            color: $logo-color2;
-        }
-
+    &:focus {
+      color: $logo-color2;
+    }
   }
 
   &__contact {
-      // display: flex;
-          @include flexible ();
-      margin-left: auto;
-      // flex-direction: row;
-      gap: 50px;
+    // display: flex;
+    display: none;
+    margin-left: auto;
+    // flex-direction: row;
+  
+    @media screen and (min-width: 768px) {
+      @include flexible($direction: column);
+      gap: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include flexible();
+      gap: 30px;
+    }
   }
-&__email {
+  &__email {
     color: $paragraf-color;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.14;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.24px;
     // display: flex;
     // justify-content: center;
     // align-items: center;
-        @include flexible ();
+    @include flexible();
     gap: 10px;
     // transition-property: color;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: color);
+    @include transitions($property: color);
 
     &:hover,
-        &:focus {
-            color: $logo-color2;
-    
-            .header__mail {
-                fill: $logo-color2;
-            }
-        }
-}
-&__mail {
+    &:focus {
+      color: $logo-color2;
+
+      .header__mail {
+        fill: $logo-color2;
+      }
+    }
+                @media screen and (min-width: 1200px) {
+                  font-size: 14px;
+                  letter-spacing: 0.28px;
+                }
+  }
+  &__mail {
     width: 16px;
     height: 12px;
     fill: $paragraf-color;
     // transition-property: fill;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: fill);
-}
+    @include transitions($property: fill);
+  }
 
-&__tel {
+  &__tel {
     color: $paragraf-color;
     font-size: 14px;
     font-weight: 500;
@@ -114,33 +147,32 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-        @include flexible ();
+    @include flexible();
     gap: 10px;
     // transition-property: color;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: color);
+    @include transitions($property: color);
 
-        &:hover,
-            &:focus {
-                color: $logo-color2;
-        
-                .header__phone {
-                    fill: $logo-color2;
-                }
-            }
-}
+    &:hover,
+    &:focus {
+      color: $logo-color2;
 
-&__phone {
+      .header__phone {
+        fill: $logo-color2;
+      }
+    }
+  }
+
+  &__phone {
     width: 10px;
     height: 16px;
     fill: $paragraf-color;
     // transition-property: fill;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: fill);
-}
-
+    @include transitions($property: fill);
+  }
 }
 
 .active {

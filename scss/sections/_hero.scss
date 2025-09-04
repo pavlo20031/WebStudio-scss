@@ -11,6 +11,13 @@
   background-position: center;
   background-size: cover;
 
+  @media screen and (min-width:768px) {}
+  
+    @media screen and (min-width:1200px) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
   &__box {
     // display: flex;
     text-align: center;
@@ -20,18 +27,29 @@
   }
 
   &__title {
-    width: 696px;
-    color: $main-color2;
+  color: $main-color2;
     text-align: center;
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
     line-height: 1.36;
-    /* 136.364% */
-    letter-spacing: 2.64px;
+    letter-spacing: 1.56px;
     text-transform: uppercase;
-    // flex-wrap: wrap;
-        @include flexible ();
-    margin: 0 auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    animation-name: title-move;
+    animation-duration: 2000ms;
+  
+    @media screen and (min-width: 768px) {
+      width: 360px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      letter-spacing: 2.64px;
+      width: 696px;
+    }
   }
 
   &__button {

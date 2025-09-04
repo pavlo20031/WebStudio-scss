@@ -27,7 +27,7 @@
     // transition-property: background-color, color, box-shadow;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: background-color, color, box-shadow);
+        @include transitions ($property: background-color color box-shadow);
 
     &:hover,
     &:focus {
@@ -96,7 +96,7 @@
       // transition-property: transform, opacity;
       // transition-duration: 250ms;
       // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          @include transitions ($property: transform, opacity);
+          @include transitions ($property: transform opacity);
       transform: translateY(294px);
     }
 
