@@ -5,18 +5,53 @@
 
 
   &__box {
-    display: flex;
-    align-items: baseline;
-    justify-content: start;
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: start;
+    @include flexible ();
+          gap: 60px;
+    @media screen and (min-width:768px){
+          @include flexible ();
+    }
+
+    @media screen and (min-width:1200px) {
+          @include flexible ($align: baseline, $justify: start, $wrap:nowrap);
+                gap: 0;
+    }
+  }
+
+  &__contain{
+    @include flexible ($direction:column);
+
+  @media screen and (min-width:1200px) {
+      @include flexible ($align:start,$direction: column);
+  }
+  }
+  &__container{
+              @include flexible ($direction:column);
+              gap:60px;
+    @media screen and (min-width:768px) {
+          @include flexible ($align:baseline);
+          gap: 165px;
+    }
+    @media screen and (min-width:1200px) {
+                @include flexible ($wrap:nowrap, $align:baseline);
+                gap: 0;
+    }
   }
 
   &__logo {
     color: $main-color;
     font-family: Raleway;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.38;
-    letter-spacing: 0.78px;
+    letter-spacing: 0.72px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            letter-spacing: 0.78px;
+          }
   }
 
   &__text {
@@ -36,9 +71,12 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
+    @include flexible ($direction:column);
     gap: 9px;
+
+    @media screen and (min-width:1200px) {
+          @include flexible ($align:start,$direction: column)
+    }
   }
 
   &__address {
@@ -69,8 +107,17 @@
   }
 
   &__box2 {
-    margin-left: 70px;
-    margin-right: auto;
+          @include flexible ($direction: column);
+
+    @media screen and (min-width:768px) {
+      @include flexible ($direction:column);
+      margin: 0;
+    }
+    @media screen and (min-width:1200px) {
+        margin-left: 70px;
+          margin-right: 121px;
+                    @include flexible ($direction: column, $align:start);
+    }
   }
 
   &__title {
@@ -120,8 +167,14 @@
     // display: flex;
     // justify-content: center;
     // align-items: end;
-        @include flexible ($align:end);
+        @include flexible ($direction:column);
     gap: 12px;
+    @media screen and (min-width:768px) {
+              @include flexible ($direction:column);
+    }
+                @media screen and (min-width:1200px) {
+                        @include flexible ($align: end);
+                }
   }
 
   &__label {
@@ -131,10 +184,17 @@
     line-height: 1.14;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+        @media screen and (min-width:480px) {
+                          @include flexible ($direction: column);
+        }
+    
+          @media screen and (min-width:1200px) {
+                        @include flexible ($direction: column, $align:start, $justify:start);
+          }
   }
 
   &__input {
-    width: 358px;
+    width: 100%;
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid $email-color;
@@ -147,6 +207,13 @@
     line-height: 1.25;
     /* 125% */
     letter-spacing: 0.48px;
+    
+    @media screen and (min-width:480px){
+      width: 450px;
+    }
+    @media screen and (min-width:1200px) {
+          width: 358px;
+    }
   }
 
   &__btn {
