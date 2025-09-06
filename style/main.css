@@ -1133,7 +1133,12 @@ transform: rotateZ(-45deg);
   overflow: hidden;
 }
 .portfolio__subtitle {
-  padding: 63px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 24px;
   background-color: rgba(33, 150, 243, 0.9);
   color: #FFF;
   font-size: 18px;
@@ -1151,6 +1156,16 @@ transform: rotateZ(-45deg);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(294px);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__subtitle {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__subtitle {
+    padding: 63px 24px;
+  }
 }
 .portfolio__card {
   display: flex;

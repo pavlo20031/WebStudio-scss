@@ -106,7 +106,8 @@ width: 100%;
     }
 
     &__subtitle {
-      padding: 63px 24px;
+      @include flexible ();
+      padding: 0 24px;
       background-color: $portfolio-color;
       color: $main-color;
       font-size: 18px;
@@ -125,6 +126,13 @@ width: 100%;
       // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           @include transitions ($property: transform opacity);
       transform: translateY(294px);
+
+      @media screen and (min-width:768px) {
+              padding: 49px 24px 77px 24px;
+      }
+      @media screen and (min-width:1200px) {
+              padding: 63px 24px;
+      }
     }
 
     &__card {
