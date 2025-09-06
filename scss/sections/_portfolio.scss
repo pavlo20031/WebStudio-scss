@@ -1,15 +1,35 @@
 .portfolio {
-  padding-top: 180px;
-  padding-bottom: 94px;
-  display: flex;
+  padding-top: 146px;
+  padding-bottom: 60px;
+
+
+  @media screen and (min-width:1200px) {
+      padding-top: 180px;
+        padding-bottom: 94px;
+  }
 
   &__list {
+        // width: 326px;
     // display: flex;
     // justify-content: center;
-        @include flexible ();
+        @include flexible ($justify:stretch);
     gap: 8px;
+    row-gap: 15px;
     margin-bottom: 50px;
+
+    @media screen and (min-width:480px) {
+      width: 326px;
+    }
+
+    @media screen and (min-width:768px) {
+                    @include flexible ();
+      width: 100%;
+
+    }
   }
+
+
+
 
   &__button {
     // display: flex;
@@ -49,17 +69,24 @@
   &__projects {
     // display: flex;
     // flex-wrap: wrap;
-        @include flexible ();
+        @include flexible ($justify:stretch);
     gap: 30px;
   }
 
   &__item {
     outline: 1px solid $outline-color;
-    flex-basis: calc((100% - 60px) / 3);
+width: 100%;
     // transition-property: box-shadow;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         @include transitions ($property: box-shadow);
+
+        @media screen and (min-width:768px) {
+              flex-basis: calc((100% - 30px) / 2);
+        }
+                                @media screen and (min-width:1200px) {
+                                  flex-basis: calc((100% - 60px) / 3);
+                                }
 
     &:hover,
     &:focus {
@@ -107,6 +134,15 @@
       padding: 20px 24px 20px 24px;
       // flex-direction: column;
       gap: 4px;
+    }
+
+    &__width{
+      @media screen and (min-width:768px) {
+                    padding: 20px 24px 56px 24px;
+      }
+                        @media screen and (min-width:1200px) {
+                          padding: 20px 24px 20px 24px;
+                        }
     }
 
     &__name {

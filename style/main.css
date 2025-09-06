@@ -1028,18 +1028,39 @@ transform: rotateZ(-45deg);
 }
 
 .portfolio {
-  padding-top: 180px;
-  padding-bottom: 94px;
-  display: flex;
+  padding-top: 146px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 180px;
+    padding-bottom: 94px;
+  }
 }
 .portfolio__list {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 8px;
+  row-gap: 15px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 480px) {
+  .portfolio__list {
+    width: 326px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 .portfolio__button {
   display: flex;
@@ -1076,7 +1097,7 @@ transform: rotateZ(-45deg);
 }
 .portfolio__projects {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
@@ -1084,10 +1105,20 @@ transform: rotateZ(-45deg);
 }
 .portfolio__item {
   outline: 1px solid #EEE;
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .portfolio__item:hover, .portfolio__item:focus {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -1130,6 +1161,16 @@ transform: rotateZ(-45deg);
   background-color: #FFF;
   padding: 20px 24px 20px 24px;
   gap: 4px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__width {
+    padding: 20px 24px 56px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__width {
+    padding: 20px 24px 20px 24px;
+  }
 }
 .portfolio__name {
   color: #212121;
