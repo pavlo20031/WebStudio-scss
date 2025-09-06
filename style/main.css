@@ -470,7 +470,7 @@ transform: rotateZ(-45deg);
   margin-bottom: 10px;
 }
 .advantages__paragraf {
-  width: 270px;
+  width: 100%;
   color: #757575;
   font-size: 14px;
   font-weight: 400;
@@ -645,7 +645,7 @@ transform: rotateZ(-45deg);
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: 1.08px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .client__list {
   display: flex;
