@@ -25,6 +25,7 @@
 
   @media screen and (min-width:1200px) {
       @include flexible ($align:start,$direction: column);
+      margin-right: 70px;
   }
   }
   &__container{
@@ -80,6 +81,7 @@
   }
 
   &__address {
+    width: 231px;
     color: $main-color;
     font-size: 14px;
     font-weight: 400;
@@ -114,8 +116,8 @@
       margin: 0;
     }
     @media screen and (min-width:1200px) {
-        margin-left: 70px;
-          margin-right: 121px;
+
+          margin-right: 97px;
                     @include flexible ($direction: column, $align:start);
     }
   }
@@ -174,7 +176,7 @@
               @include flexible ($direction:column);
     }
                 @media screen and (min-width:1200px) {
-                        @include flexible ($align: end);
+                        @include flexible ($align: end, $justify:stretch);
                 }
   }
 
@@ -190,6 +192,7 @@
                         
     
           @media screen and (min-width:1200px) {
+            width:358px;
                         @include flexible ($direction: column, $align:start, $justify:start);
           }
   }
