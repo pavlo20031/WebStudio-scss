@@ -96,6 +96,20 @@ body {
   flex-wrap: nowrap;
   flex-direction: row;
 }
+.header__button {
+  display: block;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
+.header__burger {
+  fill: #000;
+  width: 40px;
+  height: 40px;
+}
 .header__logo {
   color: #000;
   font-family: Raleway;

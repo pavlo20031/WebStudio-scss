@@ -21,6 +21,23 @@
     @include flexible($wrap:nowrap);
   }
 
+  &__button{
+    display: block;
+    background-color: $main-color;
+
+
+    @media screen and (min-width:768px) {
+          display: none;
+    }
+
+  }
+
+  &__burger{
+    fill: $logo-color;
+        width: 40px;
+    height: 40px;
+  }
+
   &__logo {
     color: $logo-color;
     font-family: Raleway;
