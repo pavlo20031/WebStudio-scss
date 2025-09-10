@@ -1228,8 +1228,8 @@ transform: rotateZ(-45deg);
 }
 
 .modal {
+  width: 100%;
   background-color: #FFF;
-  width: 528px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -1241,6 +1241,16 @@ transform: rotateZ(-45deg);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__close {
   width: 30px;
@@ -1289,7 +1299,7 @@ transform: rotateZ(-45deg);
   position: relative;
 }
 .modal__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1318,7 +1328,7 @@ transform: rotateZ(-45deg);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__comment {
-  width: 448px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1346,11 +1356,13 @@ transform: rotateZ(-45deg);
   gap: 30px;
 }
 .modal__labels {
+  height: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
+  gap: 8px;
   margin-top: 20px;
   color: #757575;
   font-size: 14px;
@@ -1359,14 +1371,25 @@ transform: rotateZ(-45deg);
   /* 171.429% */
   letter-spacing: 0.42px;
 }
-.modal__box {
+.modal__subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  gap: 7px;
-  margin-right: 8px;
+  gap: 5px;
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.71;
+  /* 171.429% */
+  letter-spacing: 0.36px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__subtitle {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+  }
 }
 .modal__check {
   -webkit-appearance: none;
@@ -1387,10 +1410,10 @@ transform: rotateZ(-45deg);
 }
 .modal__link {
   color: #2196F3;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.71;
-  letter-spacing: 0.42px;
+  letter-spacing: 0.36px;
   text-decoration-line: underline;
   text-decoration-style: solid;
   -webkit-text-decoration-skip-ink: none;
@@ -1398,6 +1421,12 @@ transform: rotateZ(-45deg);
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+@media screen and (min-width: 1200px) {
+  .modal__link {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+  }
 }
 .modal__button {
   border-radius: 4px;

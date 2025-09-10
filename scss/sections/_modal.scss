@@ -22,8 +22,8 @@
 }
 
 .modal {
+  width: 100%;
   background-color: $main-color;
-  width: 528px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -36,7 +36,15 @@
   // transition-property: transform;
   // transition-duration: 250ms;
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      @include transitions ($property: transform);
+  @include transitions($property: transform);
+
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 
   &__close {
     width: 30px;
@@ -44,7 +52,7 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-        @include flexible ();
+    @include flexible();
     /* padding: 6px; */
     background-color: transparent;
     border: 1px solid $modal-line;
@@ -67,7 +75,7 @@
     // transition-property: fill;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: fill);
+    @include transitions($property: fill);
   }
 
   &__title {
@@ -93,7 +101,7 @@
   }
 
   &__input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     border-radius: 4px;
     border: 1px solid $border-color;
@@ -103,7 +111,7 @@
     // transition-property: border;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: border);
+    @include transitions($property: border);
 
     &:is(:hover, :focus) {
       border: 1px solid $logo-color2;
@@ -125,11 +133,11 @@
     // transition-property: fill;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: fill);
+    @include transitions($property: fill);
   }
 
   &__comment {
-    width: 448px;
+    width: 100%;
     height: 120px;
     border-radius: 4px;
     border: 1px solid $border-color;
@@ -144,7 +152,7 @@
     // transition-property: border;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: border);
+    @include transitions($property: border);
 
     &:is(:hover, :focus) {
       border: 1px solid $logo-color2;
@@ -156,7 +164,7 @@
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-        @include flexible ($direction:column);
+    @include flexible($direction: column);
     gap: 30px;
   }
 
@@ -164,7 +172,9 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-        @include flexible ();
+    height: 15px;
+    @include flexible($wrap: nowrap);
+    gap: 8px;
     margin-top: 20px;
     color: $paragraf-color;
     font-size: 14px;
@@ -174,13 +184,22 @@
     letter-spacing: 0.42px;
   }
 
-  &__box {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-        @include flexible ();
-    gap: 7px;
-    margin-right: 8px;
+  &__subtitle {
+      @include flexible($wrap: nowrap);
+      gap: 5px;
+    color: $paragraf-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.71;
+    /* 171.429% */
+    letter-spacing: 0.36px;
+
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      letter-spacing: 0.42px;
+    }
   }
 
   &__check {
@@ -202,16 +221,21 @@
 
   &__link {
     color: $logo-color2;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.71;
-    letter-spacing: 0.42px;
+    letter-spacing: 0.36px;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      letter-spacing: 0.42px;
+    }
   }
 
   &__button {
@@ -223,14 +247,14 @@
     // font-size: 16px;
     // font-weight: 700;
     // line-height: 1.87;
-        @include button ();
+    @include button();
     /* 187.5% */
     letter-spacing: 0.96px;
     padding: 10px 52px;
     // transition-property: background-color;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @include transitions ($property: background-color);
+    @include transitions($property: background-color);
 
     &:is(:hover, :focus) {
       background-color: $hover-color;
