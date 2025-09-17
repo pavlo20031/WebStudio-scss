@@ -32,7 +32,7 @@ info@devstudio.com</a></li>
 </svg> 
 +38 096 111 11 11</a></li>
 </ul>
-<button class="header__button" type="button">
+<button class="header__button" type="button" data-mobile-open>
     <svg class="header__burger">
         <use href="./img/symbol-defs.svg#burger"></use>
     </svg>
@@ -394,6 +394,27 @@ info@devstudio.com</a></li>
         </form>
     </div>
     </div>
+    <div data-mobile class="mobile is-hidden">
+        <button type="button" class="mobile__close" data-mobile-close><svg class="mobile__icon">
+            <use href="./img/symbol-defs.svg#close"></use>
+        </svg></button>
+        <ul class="mobile__list">
+            <li class="mobile__item"><a href="./index.html" class="mobile__link active">Студія</a></li>
+            <li class="mobile__item"><a href="./pages/portfolio.html" class="mobile__link">Портфоліо</a></li>
+            <li class="mobile__item"><a href="#" class="mobile__link">Контакти</a></li>
+        </ul>
+        <ul class="mobile__items">
+            <li class="mobile__itm"><a href="tel:+380961111111" class="mobile__contact">+38 096 111 11 11</a></li>
+            <li class="mobile__itm"><a href="mailto:info@devstudio.com" class="mobile__contact">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile__wrap">
+            <li class="mobile__elem"><a href="#" class="mobile__social">Instagram</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">Twitter</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">Facebook</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">LinkedIn</a></li>
+        </ul>
+    </div>
+    <script type="module" src="./js/menu.js"></script>
 <script type="module" src="./js/modal.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

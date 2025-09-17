@@ -18,9 +18,8 @@
             <a class="header__logo" href="../index.html"><span class="header__text">Web</span>Studio</a>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a class="animate__animated animate__bounceInDown header__link active "
-                            href="../index.html">Студія</a></li>
-                    <li class="header__item"><a class="header__link" href="../pages/portfolio.html">Портфоліо</a></li>
+                    <li class="header__item"><a class="animate__animated animate__bounceInDown header__link" href="../index.html">Студія</a></li>
+                    <li class="header__item"><a class="header__link active" href="../pages/portfolio.html">Портфоліо</a></li>
                     <li class="header__item"><a class="header__link" href="#">Контакти</a></li>
                 </ul>
             </nav>
@@ -36,7 +35,7 @@
                         </svg>
                         +38 096 111 11 11</a></li>
             </ul>
-            <button class="header__button" type="button">
+            <button data-mobile-open class="header__button" type="button">
                 <svg class="header__burger">
                     <use href="../img/symbol-defs.svg#burger"></use>
                 </svg>
@@ -226,6 +225,27 @@
         </form>
     </div>
 </footer>
+    <div data-mobile class="mobile is-hidden">
+        <button type="button" class="mobile__close" data-mobile-close><svg class="mobile__icon">
+                <use href="../img/symbol-defs.svg#close"></use>
+            </svg></button>
+        <ul class="mobile__list">
+            <li class="mobile__item"><a href="../index.html" class="mobile__link active">Студія</a></li>
+            <li class="mobile__item"><a href="./pages/portfolio.html" class="mobile__link">Портфоліо</a></li>
+            <li class="mobile__item"><a href="#" class="mobile__link">Контакти</a></li>
+        </ul>
+        <ul class="mobile__items">
+            <li class="mobile__itm"><a href="tel:+380961111111" class="mobile__contact">+38 096 111 11 11</a></li>
+            <li class="mobile__itm"><a href="mailto:info@devstudio.com" class="mobile__contact">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile__wrap">
+            <li class="mobile__elem"><a href="#" class="mobile__social">Instagram</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">Twitter</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">Facebook</a></li>
+            <li class="mobile__elem"><a href="#" class="mobile__social">LinkedIn</a></li>
+        </ul>
+    </div>
+    <script type="module" src="../js/menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

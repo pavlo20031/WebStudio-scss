@@ -18,23 +18,21 @@
   &__box {
     // display: flex;
     // align-items: center;
-    @include flexible($wrap:nowrap);
+    @include flexible($wrap: nowrap);
   }
 
-  &__button{
+  &__button {
     display: block;
     background-color: $main-color;
 
-
-    @media screen and (min-width:768px) {
-          display: none;
+    @media screen and (min-width: 768px) {
+      display: none;
     }
-
   }
 
-  &__burger{
+  &__burger {
     fill: $logo-color;
-        width: 40px;
+    width: 40px;
     height: 40px;
   }
 
@@ -47,11 +45,10 @@
     letter-spacing: 0.72px;
     margin-right: auto;
 
-
     @media screen and (min-width: 1200px) {
       font-size: 26px;
       letter-spacing: 0.78px;
-          margin-right: 93px;
+      margin-right: 93px;
     }
   }
 
@@ -106,9 +103,9 @@
     display: none;
     margin-left: auto;
     // flex-direction: row;
-  
+
     @media screen and (min-width: 768px) {
-      @include flexible($direction: column);
+      @include flexible($direction: column, $align: start);
       gap: 10px;
     }
 
@@ -141,10 +138,10 @@
         fill: $logo-color2;
       }
     }
-                @media screen and (min-width: 1200px) {
-                  font-size: 14px;
-                  letter-spacing: 0.28px;
-                }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+    }
   }
   &__mail {
     width: 16px;
@@ -158,10 +155,10 @@
 
   &__tel {
     color: $paragraf-color;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.14;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.24px;
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -180,6 +177,10 @@
         fill: $logo-color2;
       }
     }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+    }
   }
 
   &__phone {
@@ -196,9 +197,27 @@
 .active {
   position: relative;
   color: $logo-color2;
-  animation-name: move-logo;
-  animation-duration: 500ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // animation-name: move-logo;
+  // animation-duration: 500ms;
+  // animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 4px;
+    background-color: $logo-color2;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    &::after {
+      display: block;
+    }
+  }
 }
 
 /* @keyframes move-logo{
@@ -218,14 +237,124 @@
 transform: rotateZ(-45deg);
     }
 } */
-.active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: $logo-color2;
-  border-radius: 2px;
-  position: absolute;
-  bottom: -35px;
+
+.mobile {
+  padding: 48px 0 48px 40px;
+  position: fixed;
+  top: 0;
   left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: $main-color;
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+ 
+
+    &:is(:hover, :focus) {
+      .mobile__icon {
+        fill: $logo-color2;
+      }
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: $text-color;
+
+    @include transitions($property: fill);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 150px;
+  }
+
+  &__link {
+    color: $text-color;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.175;
+    letter-spacing: 0.8px;
+
+    @include transitions($property:color);
+
+    &:is(:hover, :focus) {
+      color: $logo-color2;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 5%;
+  }
+
+  &__contact {
+    color: $paragraf-color;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.68px;
+
+    &:is(:hover, :focus) {
+      color: $logo-color2;
+    }
+  }
+
+  &__itm:first-child {
+    .mobile__contact {
+      font-size: 34px;
+      color: $logo-color2;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 10px;
+    @include flexible($justify:stretch);
+  }
+
+  &__social {
+    color: $logo-color2;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.22; /* 122.222% */
+    letter-spacing: 0.36px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__elem:not(:last-child) {
+    .mobile__social::after {
+      content: "";
+      width: 1px;
+      height: 22px;
+      background-color: $border-color;
+      display: block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.is-hidden {
+  pointer-events: none;
+  opacity: 0;
 }
