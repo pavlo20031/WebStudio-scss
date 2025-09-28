@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -110,6 +111,25 @@
     letter-spacing: 0.96px;
     padding: 10px 32px 10px 32px;
     margin: 0 auto;
+    animation-name: color;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0,2.57,0,-0.04);
+    animation-iteration-count: infinite;
+
+    @keyframes color {
+      0%{
+        color: $logo-color2;
+        background: $main-color;
+      }
+      50%{
+        color: $main-color;
+        background: $logo-color2;
+      }
+      100%{
+        color: $logo-color2;
+        background: $main-color;
+      }
+    }
   }
 }
 
