@@ -295,23 +295,6 @@ body {
   }
 }
 
-/* @keyframes move-logo{
-    0%{
-        transform: rotateZ(45deg);
-    }
-    12.5%{
-        transform: rotateZ(22.5deg);
-    }
-    25%{
-                transform: rotateZ(0);
-    }
-    37.5%{
-        transform: rotateZ(-22.5deg);
-    }
-    50%{
-transform: rotateZ(-45deg);
-    }
-} */
 .mobile {
   padding: 48px 0 48px 40px;
   position: fixed;
@@ -512,22 +495,22 @@ transform: rotateZ(-45deg);
   padding: 10px 32px 10px 32px;
   margin: 0 auto;
   animation-name: color;
-  animation-duration: 5s;
-  animation-timing-function: cubic-bezier(0, 2.57, 0, -0.04);
+  animation-duration: 3s;
+  animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
 @keyframes color {
   0% {
-    color: #2196F3;
-    background: #FFF;
-  }
-  50% {
     color: #FFF;
     background: #2196F3;
   }
-  100% {
+  50% {
     color: #2196F3;
     background: #FFF;
+  }
+  100% {
+    color: #FFF;
+    background: #2196F3;
   }
 }
 
