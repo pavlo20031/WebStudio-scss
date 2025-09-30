@@ -38,8 +38,8 @@
                   }
     &::before {
       content: "";
-      background: url(../img/antenna.webp) $main-color2 center no-repeat;
-width: 100%;
+      background: url(../img/antenna.svg) $main-color2 center no-repeat;
+      width: 100%;
       height: 120px;
       display: block;
       background-size: 70px 70px;
@@ -54,15 +54,15 @@ width: 100%;
     }
 
     &:nth-child(2):before {
-      background: url(../img/clock.webp) $main-color2 center no-repeat;
+      background: url(../img/clock.svg) $main-color2 center no-repeat;
     }
 
     &:nth-child(3):before {
-      background: url(../img/diagram.webp) $main-color2 center no-repeat;
+      background: url(../img/diagram.svg) $main-color2 center no-repeat;
     }
 
     &:nth-child(4):before {
-      background: url(../img/astronaut.webp) $main-color2 center no-repeat;
+      background: url(../img/astronaut.svg) $main-color2 center no-repeat;
     }
   }
 
